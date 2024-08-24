@@ -1,13 +1,13 @@
 (function() {
     'use strict';
 
-    var mongoose = require('mongoose'),
-        fs = require('fs');
+    const mongoose = require('mongoose'),
+    fs = require('fs');
 
     module.exports = function() {
 
-        var dbUrl = 'mongodb://localhost/testDb';
-        var db = mongoose.connect(dbUrl);
+        const dbUrl = 'mongodb://localhost/testDb';
+        const db = mongoose.connect(dbUrl);
 
         // When successfully connected
         mongoose.connection.on('connected', function() {

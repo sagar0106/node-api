@@ -1,4 +1,4 @@
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
 
     moduleSchema = new mongoose.Schema({
         title: { type: String, required: true }

@@ -1,14 +1,12 @@
 (function() {
     'use strict';
-    var config = require('../config/config');
-    var _ = require('lodash');
-    var jwt = require('jsonwebtoken');
-    var controller = function() {};
+    const config = require('../config/config');
+    const _ = require('lodash');
+    const jwt = require('jsonwebtoken');
+    let controller = function() {};
 
     function checkToken(req, res, next) {
-        var token = req.get("x-access-token");
-        console.log("----token---");
-        console.log(token);
+        const token = req.get("x-access-token");
         jwt.verify(token, config.secret, function(err, decoded) {
             if (err) {
                 console.log("----err---");

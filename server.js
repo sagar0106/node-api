@@ -1,11 +1,9 @@
-var express = require('express');
-var app = express();
-//var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 
-// mongoose.connect('mongodb://localhost/testDb');
-var mongoose = require('./config/mongoose.js');
-var db = mongoose();
+const mongoose = require('./config/mongoose.js');
+const db = mongoose();
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');

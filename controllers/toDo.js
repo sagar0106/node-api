@@ -1,10 +1,10 @@
 (function() {
     'use strict';
-    var crud = require('../helper/crud');
-    var mongoose = require('mongoose');
-    var Entity = mongoose.model('toDo');
+    const crud = require('../helper/crud');
+    const mongoose = require('mongoose');
+    const Entity = mongoose.model('toDo');
 
-    var controller = function() {};
+    let controller = function() {};
 
     function list(req, res, next) {
         crud.list(Entity, req.options, req.body, function(err, data) {
@@ -38,7 +38,7 @@
     }
 
     function update(req, res, next) {
-        var query = { _id: mongoose.Types.ObjectId(req.params.id) }
+        const query = { _id: mongoose.Types.ObjectId(req.params.id) }
         crud.update(Entity, query, req.body, req, function(err, data) {
             if (err) {
                 return next(err);
@@ -49,7 +49,7 @@
     }
 
     function remove(req, res, next) {
-        var query = { _id: mongoose.Types.ObjectId(req.params.id) }
+        const query = { _id: mongoose.Types.ObjectId(req.params.id) }
         crud.remove(Entity, query, {}, function(err, data) {
             if (err) {
                 return next(err);

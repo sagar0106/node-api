@@ -1,4 +1,4 @@
-var mongoose = require('mongoose'),
+const mongoose = require('mongoose'),
 
     toDoSchema = new mongoose.Schema({
         title: { type: String, required: true },
